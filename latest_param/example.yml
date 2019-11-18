@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+  HostLaunchConfig:
+    Type: "AWS::AutoScaling::LaunchConfiguration"
+    Properties:
+      ImageId:
+        !Transform {
+          "Name": LatestParam,
+          "Parameters": { parameter: "default_ami" },
+        }

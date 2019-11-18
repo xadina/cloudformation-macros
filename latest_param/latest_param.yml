@@ -1,0 +1,21 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Macro that retrieves the lastest version of an ssm parameter'
+
+Resources:
+  Macro:
+    Type: AWS::CloudFormation::Macro
+    Properties:
+      Name: LatestParam
+      FunctionName: !GetAtt LatestParamMacroFunction.Arn
+  LatestParamMacroFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src
+      Handler: index.handler
+      Runtime: python3.6
+      Timeout: 5
+      Policies:
+        - AWSLambdaExecute # Managed Policy
+        - AmazonSSMReadOnlyAccess # Managed Policy
