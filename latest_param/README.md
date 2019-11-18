@@ -1,4 +1,4 @@
-# ParamVersion CloudFormation Macro
+# LatestParam CloudFormation Macro
 
 The `LatestParam` macro provides a function-scoped `LatestParam` property for CloudFormation resources. It allows you to extract a Tag specified in a stack so that it can be reused elsewhere.
 
