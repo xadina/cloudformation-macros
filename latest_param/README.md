@@ -1,8 +1,8 @@
 # ParamVersion CloudFormation Macro
 
-The `ParamVersion` macro provides a function-scoped `ParamVersion` property for CloudFormation resources. It allows you to extract a Tag specified in a stack so that it can be reused elsewhere.
+The `LatestParam` macro provides a function-scoped `LatestParam` property for CloudFormation resources. It allows you to extract a Tag specified in a stack so that it can be reused elsewhere.
 
-## How to install and use the ParamVersion macro
+## How to install and use the LatestParam macro
 
 ### Deploying
 
@@ -15,7 +15,7 @@ The `ParamVersion` macro provides a function-scoped `ParamVersion` property for 
 2. Deploy the packaged CloudFormation template to a CloudFormation stack:
 
     ```shell
-    aws cloudformation deploy --stack-name ParamVersionMacro --template-file param_version_compiled.yml --tags mission=cloud --capabilities CAPABILITY_IAM
+    aws cloudformation deploy --stack-name LatestParamMacro --template-file param_version_compiled.yml --tags mission=cloud --capabilities CAPABILITY_IAM
     ```
 
 3. To test out the macro's capabilities, have a look at the provided example template: `example.yml`
