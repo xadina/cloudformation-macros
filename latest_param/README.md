@@ -1,6 +1,6 @@
 # LatestParam CloudFormation Macro
 
-The `LatestParam` macro provides a function-scoped `LatestParam` property for CloudFormation resources. It allows you to extract a Tag specified in a stack so that it can be reused elsewhere.
+The `LatestParam` macro provides a function-scoped `LatestParam` property for CloudFormation resources. It allows you to resolve the latest version of the requested SSM parameter. This macro will decrypt encrypted parameters.
 
 ## How to install and use the LatestParam macro
 
