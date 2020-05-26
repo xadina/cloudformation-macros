@@ -5,7 +5,7 @@ client = boto3.client("ssm")
 
 def extract_value(params):
     status = "success"
-    key = params["parameter"]
+    key = params["ssm_parameter"]
     try:
         details = client.get_parameter(Name=key, WithDecryption=True)
         try:
