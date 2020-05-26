@@ -7,5 +7,5 @@ Resources:
       ImageId:
         !Transform {
           "Name": LatestParam,
-          "Parameters": { parameter: "default_ami" },
+          "Parameters": { ssm_parameter: "default_ami" },
         }
